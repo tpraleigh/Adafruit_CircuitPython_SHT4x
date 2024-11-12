@@ -1,0 +1,9 @@
+[Unit]
+Description=A service that will keep my python app running in the background
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+ExecStart=/home/traleigh/GitRepo/Adafruit_CircuitPython_SHT4x/env/bin/python3 /home/traleigh/GitRepo/Adafruit_CircuitPython_SHT4x/sht4x_temperature_Humidity.py
+[Install]
+WantedBy=multi-user.target
